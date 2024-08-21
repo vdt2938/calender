@@ -1,16 +1,46 @@
-
+*{
+	box-sizing: border-box;
+}
 body {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	font-family: "Lato", sans-serif;
+	
+	
+
 }
-.main{
-	display: grid;
-	place-items: center;
-	height: 100vh;
-	width: 100%;
-	background-color: #000;
+.navbar{
+	display: flex;
+	background-color: aqua;
+	justify-content: space-between;
+}
+span{
+	background-color: yellow;
+	justify-content: center;
+	align-content: center;
+
+}
+.clock_style{
+	background: black;
+	text-align: center;
 	color: cyan;
-	font-size: 50px;
+	font-size: 4rem;
+}
+
+.calender{
+	background-color: gray;
+	height: 100%;
+}
+.month{
+	padding:10px;
+	background-color: white;
+	border-radius: 5px;
+	margin: 5px;
+	text-align: center;
+}
+.month_grid{
+	display: grid;
+	grid-template: 1fr 1fr 1fr/ 1fr 1fr 1fr;
+}
+h1{
+	text-align: center;
 }
