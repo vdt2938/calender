@@ -31,7 +31,7 @@ let clock = () => {
 
     if (hrs == 0) {
      hrs = 12;
-    } else if (hrs >= 12) {
+    } else if (hrs > 12) {
       hrs = hrs - 12;
       period = "PM";
     }
@@ -43,6 +43,46 @@ let clock = () => {
     document.getElementById("clock").innerText = time;
     setTimeout(clock, 1000);
   };
-  
-  clock();
+clock();
 
+let d = () =>{
+//get all of date from below to get into d function
+}
+
+let date = new Date()
+let year = date.getFullYear()
+let year_HTML = document.getElementsByTagName('h1')[0]
+let currentlymonth = date.getMonth()  
+let month_name = [
+  'January','February','March',
+  'April', 'May', 'June',
+  'July', 'August', 'September',
+  'October','November','December'
+]
+let day = [
+  'sun','mon','tues','wed','thurs','fri','sat'
+]
+let month_class = document.getElementsByClassName('month')
+
+
+for(i = 0;i<month_name.length;i++){
+  /*
+  position is month_class
+  text is month 
+  create h3 
+ */
+  try_element = ['h1','h2','h3','h4','h5','h6','p','span']
+  h3 = document.createElement(try_element[1])
+  text = document.createTextNode(month_name[i])
+  h3.appendChild(text)
+  const daysInMonth = (year, month) => new Date(year, month, 0).getDate();
+  console.log(i+'.'+daysInMonth(year, i)); // 31
+  month_class[i].appendChild(h3)
+}
+year_HTML.innerHTML = year
+
+month_class[currentlymonth].style.background = 'green'
+
+
+
+//daysInMonth(2024, 2); // 29
