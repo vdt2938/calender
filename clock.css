@@ -1,0 +1,214 @@
+*{
+	box-sizing: border-box;
+}
+
+html, body { 
+	min-height: 100%; 
+	display: flex;
+	flex-direction: column;
+	padding: 0;
+	margin: 0;
+}
+body{
+	display: flex;
+	flex-direction: column;
+	background-color: purple;
+	flex: 1;
+	
+}
+.wrapper{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	background-color: rgb(241, 133, 0);
+	padding: 10px;
+	margin: 10px;
+	
+
+	
+}
+.navbar{
+	display: flex;
+	background-color: aqua;
+	justify-content: space-between;
+	border-radius: 15px;
+	
+}
+.debt{
+	background-color: white;
+}
+.ball{
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	background-color: blue;
+	border-radius: 100%;
+	animation: move 60s infinite ;
+
+}
+@keyframes move {
+	0%{
+		
+		border-radius: 0%;
+	}
+	100%{
+		background-color: green;
+		border-radius: 100%;
+		transform: translate(250px, 500px);
+		/* transform: rotate(20deg); */
+	}
+}
+.page{
+	border-radius: 5px;
+	background-color: gray;
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+
+}
+.week{
+	display: grid;
+	grid-template-columns: repeat(7, auto);
+}
+.day{
+	background: white;
+
+	margin: 5px;
+}
+.weekday{
+	background: white;
+
+	margin: 5px;
+}
+.day:nth-child(7n + 0){
+	background-color: red;
+}
+.day:nth-child(7n + 1){
+	background-color: red;
+}
+/* green for only friday */
+.day:nth-child(6){
+	background-color: green;
+}
+
+.clock_style{
+	background: black;
+	text-align: center;
+	color: cyan;
+	font-size: 30px; 
+	border-radius: 5px;
+	border: 5px solid white;
+	grid-area: 1 /1/2  /2 span ;
+}
+/* 
+.calender{
+	display: flex;
+}
+*/
+
+.calender{
+	display: flex;
+	flex: 1 2;
+	flex-direction: column;
+	background-color: gray;
+	padding: 10px;
+	border: 5px solid white;
+	border-radius: 5px;
+	margin: 5px;
+	height: 100%;
+	grid-area: 2 /1/2  /2 span ;
+}
+
+
+.month_grid{
+	display: grid;
+	background: orangered;
+	grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr ;
+	flex:1;
+}
+
+.month{
+	padding:10px;
+	background-color: white;
+	border-radius: 5px;
+	margin: 5px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	.page{
+		flex: 1;
+	}
+}
+.previous,
+.next{
+	width: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	font-family: 'Times New Roman', Times, serif;
+}
+.year{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	letter-spacing: 10px;
+	text-align: center;
+
+}
+@media screen and (max-width:400px){
+	.clock_style{
+	
+		font-size: 20px; 
+		
+	}
+	.navbar{
+		display: grid;
+		grid-template: 1fr 1fr/ 1fr 1fr ;
+		background-color: aqua;
+		justify-content: center;
+		align-items: center;
+	}
+.previous,
+.next{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	text-transform: uppercase;
+	font-family: 'Times New Roman', Times, serif;
+}
+.previous{
+	grid-area: 2 /1/2  /1 ;
+}
+.next{
+	grid-area: 2 /2/2  /2 ;
+}
+/*
+ grid-row-start
+grid-column-start
+grid-row-end
+grid-column-end */
+.year{
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	letter-spacing: 10px;
+	grid-area: 1 /1/2 /2 span ;
+
+}
+	.month_grid{
+		background-color: blueviolet;
+		display: grid;
+		min-height: 100;
+		grid-template: 1fr 1fr 1fr 1fr 1fr/ 1fr 1fr ;
+		
+	}
+}
+
