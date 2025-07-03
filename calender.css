@@ -1,18 +1,14 @@
 *{
 	box-sizing: border-box;
 }
-
-html, body { 
-	min-height: 100%; 
-	display: flex;
-	flex-direction: column;
-	padding: 0;
-	margin: 0;
+h1{
+	text-align: center;
 }
+
 body{
 	display: flex;
 	flex-direction: column;
-	background-color: purple;
+
 	flex: 1;
 	
 }
@@ -21,44 +17,20 @@ body{
 	display: flex;
 	flex-direction: column;
 	gap: 5px;
-	background-color: rgb(241, 133, 0);
 	padding: 10px;
 	margin: 10px;
-	
-
-	
 }
 .navbar{
 	display: flex;
 	background-color: aqua;
 	justify-content: space-between;
 	border-radius: 15px;
-	
+	margin: 5px;
 }
 .debt{
 	background-color: white;
 }
-.ball{
-	width: 200px;
-	height: 200px;
-	position: fixed;
-	background-color: blue;
-	border-radius: 100%;
-	animation: move 60s infinite ;
 
-}
-@keyframes move {
-	0%{
-		
-		border-radius: 0%;
-	}
-	100%{
-		background-color: green;
-		border-radius: 100%;
-		transform: translate(250px, 500px);
-		/* transform: rotate(20deg); */
-	}
-}
 .page{
 	border-radius: 5px;
 	background-color: gray;
@@ -72,7 +44,6 @@ body{
 }
 .day{
 	background: white;
-
 	margin: 5px;
 }
 .weekday{
@@ -94,23 +65,17 @@ body{
 .clock_style{
 	background: black;
 	text-align: center;
-	color: cyan;
+	color: white;
 	font-size: 30px; 
-	border-radius: 5px;
-	border: 5px solid white;
-	grid-area: 1 /1/2  /2 span ;
+	border-radius: 10px;
 }
-/* 
-.calender{
-	display: flex;
-}
-*/
+
 
 .calender{
 	display: flex;
 	flex: 1 2;
 	flex-direction: column;
-	background-color: gray;
+	background-color: red;
 	padding: 10px;
 	border: 5px solid white;
 	border-radius: 5px;
@@ -121,10 +86,8 @@ body{
 
 
 .month_grid{
-	display: grid;
-	background: orangered;
-	grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr ;
-	flex:1;
+
+
 }
 
 .month{

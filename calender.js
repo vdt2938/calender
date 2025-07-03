@@ -51,7 +51,7 @@ let d = () =>{
 
 let date = new Date()
 let year = date.getFullYear()
-let year_HTML = document.getElementsByTagName('h1')[0]
+
 let currentlymonth = date.getMonth()  
 let month_name = [
   'January','February','March',
@@ -81,8 +81,6 @@ for(i = 0;i<month_name.length;i++){
   
   
 }
-
-year_HTML.innerHTML = year
 
 month_class[currentlymonth].style.background = 'green'
 let page = document.getElementsByClassName("page")[0]
