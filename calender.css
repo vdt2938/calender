@@ -7,18 +7,20 @@ h1{
 
 body{
 	display: flex;
-	flex-direction: column;
-
-	flex: 1;
-	
+	margin: 0;
+	justify-content: center;
+	align-items: center;
 }
-.wrapper{
-	flex: 1;
+
+.wrapper{	
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 	gap: 5px;
 	padding: 10px;
 	margin: 10px;
+	max-width: 800px;
+	min-width: 500px;
 }
 .navbar{
 	display: flex;
@@ -89,7 +91,7 @@ body{
 	padding:10px;
 	background-color: white;
 	border-radius: 5px;
-	margin: 15px 5px;
+	margin: 20px 5px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -115,6 +117,7 @@ body{
 	text-align: center;
 
 }
+
 @media screen and (max-width:400px){
 	.clock_style{
 	
